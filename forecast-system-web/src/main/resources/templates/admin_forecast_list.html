@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>需要予測</title>
+    <link rel="stylesheet" th:href="@{/forecast.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="header">
+    <span class="header-title">🍺 需要予測</span>
+    <a href="/admin_homepage" class="back-btn" title="ホームに戻る">
+    <i class="fas fa-home"></i>
+    </a>
+  </div>
+<main>
+
+    <form method="get" th:action="@{/admin/forecast}">
+    <label for="forecastDate">日付を選択：</label>
+    <input type="date" id="forecastDate" name="forecastDate"
+           th:value="${selectedDate}">
+    <button type="submit">検索</button>
+</form>
+    <table>
+        <thead>
+        <tr>
+            <th>日付</th>
+            <th>商品名</th>
+            <th>予測販売数</th>
+            <th>予測発注数</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="f : ${forecasts}">
+            <td th:text="${f.forecastDate}"></td>
+            <td th:text="${f.product.name}"></td>
+            <td th:text="${f.predictedSaleQuantity} + '本'"></td>
+            <td th:text="${f.predictedOrderQuantity} + '本'"></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</main>
+</body>
+</html>

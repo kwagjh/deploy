@@ -1,0 +1,160 @@
+/* 共通設定 */
+body {
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* ヘッダー */
+header {
+    background-color: #ffe28a;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* メイン構造 */
+main {
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+/* 表デザイン */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fef6e4;
+    color: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+th, td {
+    padding: 16px;
+    text-align: center;
+}
+
+thead {
+    background-color: #ffe28a;
+    color: #000;
+    font-size: 1.1rem;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fffdf6;
+}
+
+tbody tr:hover {
+    background-color: #fef0d5;
+    transition: 0.3s;
+}
+
+/* 詳細ボタン */
+.detail-btn {
+    padding: 8px 14px;
+    background-color: #ffe28a;
+    color: #000;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.detail-btn:hover {
+    background-color: #fdd96a;
+}
+
+/* 情報ボックス（天気・在庫） */
+.info-box {
+    background-color: #fef6e4;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.info-box p, .info-box h2 {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* グラフエリア */
+.chart-container {
+    background-color: #fef6e4;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    margin: 0 auto 40px;
+    width: 90%;
+}
+
+/* 戻るボタン */
+.back-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.back-button {
+    padding: 12px 24px;
+    background-color: #ffe28a;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #fdd96a;
+    transform: translateY(-2px);
+}
+
+/* モバイル対応 */
+@media screen and (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #fef6e4;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 12px;
+        border: none;
+        font-size: 0.95rem;
+        color: #333;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #666;
+    }
+}

@@ -1,0 +1,122 @@
+/* 全体の背景・フォント */
+body {
+  background-color: #121212;
+  color: #f1f1f1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+/* 見出し */
+h1 {
+  color: #ffcc00;
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ffcc00;
+  display: inline-block;
+  padding-bottom: 5px;
+  text-align: center;
+  display: block; /* 中央揃えにするため inline-block を block に変更 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* テーブル */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+th, td {
+  border: 1px solid #ffcc00;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #ffcc00;
+  color: #000000;
+}
+
+/* セレクトボックス */
+select {
+  padding: 5px;
+  border: 1px solid #ffcc00;
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+/* 通常のボタン（保存） */
+button {
+  background-color: #ffcc00;
+  color: #000000;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #e6b800;
+}
+
+/* 右上ボタンの固定位置 */
+.top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* ボタンリンク共通 */
+a.back-button{
+  display: inline-block;
+  padding: 6px 12px;
+  border: none;
+  background-color: #ffcc00;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+a.edit-button {
+  display: inline-block;
+  padding: 6px 12px;
+  border: none;
+  background-color: #ffcc00;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+a.create-button{
+    display: inline-block;
+  padding: 6px 12px;
+  border: none;
+  background-color: #ffcc00;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+a.edit-button:hover {
+  background-color: #666;
+}
+
+/* 新規ユーザー登録ボタン（同系色で統一） */
+a.create-button:hover {
+  background-color: #e6b800;
+}
+
+/* 戻るボタン hover */
+a.back-button:hover {
+  background-color: #e6b800;
+}
