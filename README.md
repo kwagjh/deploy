@@ -32,3 +32,9 @@ It demonstrates basic forecasting and authentication features.
    - `AZURE_FUNCTIONAPP_NAME` – your app name.
    - `JAVA_VERSION` – typically set to `17`.
 6. Commit and push to the `main` branch. The included GitHub Actions workflow will build and deploy the application.
+
+### Deploying with Azure Web App
+
+1. Create an Azure Web App and download its publish profile.
+2. Add the contents of the publish profile as the repository secret `AZURE_WEBAPP_PUBLISH_PROFILE`.
+3. Edit `.github/workflows/azure-webapp.yml` and update `AZURE_WEBAPP_NAME` with your web app's name, then push to `main` to trigger deployment.
