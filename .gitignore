@@ -1,0 +1,12 @@
+# Generated .gitignore
+# Build directories
+/target/
+# macOS system file
+.DS_Store
+# Help files
+[Hh]elp
+# Local Azurite database files
+__azurite_db_*.json
+# IDE settings
+.idea/
+.vscode/
